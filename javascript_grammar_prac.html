@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <script>
+
+    // #지역 변수
+
     // function showMessage() {
     //     let massage = '안녕하세요'; // 지역 변수(local variable) : 함수 '내에서' 선언한 변수인 지역 변수는 함수 안에서만 접근할 수 있다.
     //     alert(massage)
@@ -11,6 +14,8 @@
     // alert(massage); // massage는 함수 내 지역 변수이기 때문에 접근할 수 없어 에러가 발생한다.
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    // #외부 변수
 
     // let username = 'dahyun'; // 외부 변수(outer variable)
     // function showMessage() {
@@ -55,6 +60,8 @@
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------
 
+        // #매개변수
+
     // function showMessage(from, name) {  // 함수 showMessage에 from과 name 이라는 매개변수를 넣어준다.
     //     alert(from + ": " + name);
     // }
@@ -73,6 +80,72 @@
     // alert(from); // 함수는 복사된 값을 사용하기 때문에 외부 변수가 수정되지 않음.
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // #기본값
+
+        // function showMessage(from, name) {
+        //     alert(from + ': ' + name)
+        // }
+        
+        // showMessage('korea') 
+        // 매개변수에 인수를 전달하지 않으면 해당 값은 'undefined'가 됨.
+        // korea: undefined 
+
+        // function showMessage(from, name = 'dahyun') {
+        //     // name에 기본 값 'dahyun'을 설정할 경우 name의 인수가 들어오지 않으면 'dahyun'으로 출력됨
+        //     alert(from + ': ' + name);
+        // }
+
+        // showMessage('korea');
+        // // korea: dahyun
+        // showMessage('korea', 'mimi');
+        // // korea: mimi
+        // // 기본값이 설정되있어도 인수가 들어오면 인수를 출력함.
+
+        // function showMessage2() {
+        //     return 'dahyun';
+        // }
+
+        // function showMessage(from, name = showMessage2()) {
+        //     // 매개변수의 기본값으로 함수를 설정할 수 있으며, 설정된 함수의 반환값을 출력함.
+        //     alert(from + ": " + name)
+        // }
+
+        // showMessage('korea');
+        // // name의 인수가 없으므로 기본값으로 설정된 showMessage2를 호출함
+        // // korea: dahyun
+        // showMessage('korea', 'mimi')
+        // // name에 들어갈 인수가 있기 때문에 showMassage2를 호출하지 않음
+        // // korea: mimi
+        // // >>> 매개변수에 들어갈 인수가 없을 때만 기본값을 출력함.
+
+        // function showMassage(count) { 
+        //     alert(count ?? 'unknown');
+        //     // nullish 병합 연산자 ??를 사용하면 0처럼 falsy로 평가되는 값들을 일반 값처럼 처리할 수 있음
+        // }
+
+        // showMassage(0); // 0
+        // showMassage(null); // unknown 
+        // showMassage(); // unknown
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // #반환값
+
+        function sum(a, b) { 
+            return a + b;  
+        }
+        
+        let result = sum(1, 2);
+
+        alert(result); // 3
+
+        function CheckAge(age) {
+            if()
+        }
+
+
+
 
 </script>
 
